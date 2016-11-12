@@ -15,3 +15,34 @@ The "0" might be a different number, or multiple entries might be returned. In t
 Now we just need to add our user to the group:
 usermod -a -G group-name username
 where group-name is the data found before, and username is your linux user name. You will need to log out and in again for this change to take effect.
+
+* lilypad pinouts
+
+
+| Component       |      Arduino Pin |
+|-----------------+------------------|
+| Motor           |                3 |
+| RGB LED - Red   |                9 |
+| RGB LED - Blue  |               10 |
+| RGB LED - Green |               11 |
+| Button          |               A5 |
+| Slide Switch    |                2 |
+| White LED's     | 5, 6, A2, A3, A4 |
+| Buzzer (+)      |                7 |
+| Buzzer (-)      |               12 |
+| Light Sensor    |               A6 |
+| Temp Sensor     |               A1 |
+
+* color map definition for RGB
+
+[[https://gist.github.com/jamesotron/766994][color spectrum cycling gist]]
+
+* reading temperature sensor 
+
+  https://alysonfielding.com/2012/01/22/lilypad-arduino-sensing-ambient-temperature/
+
+[[https://cdn.sparkfun.com/datasheets/E-Textiles/Lilypad/38512_SPCN.pdf][datasheet for thermo-sensor chip]]
+
+Thermosensor is SparkFun Part number DEV-08777, Microchip P/N MCP9700
+Sensor output at 0 deg is 0.5 V
+linear coefficient is 10 mV/degC
