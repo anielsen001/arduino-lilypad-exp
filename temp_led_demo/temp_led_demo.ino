@@ -5,6 +5,9 @@ const int redPin   =  9;
 const int bluePin  = 10; 
 const int greenPin = 11; 
 
+// cmap.h contains the color map table
+#include "cmap.h"
+
 // A/D settings for reading temperature sensor
 const int MAX_TEMP_BITS = 10;             // number of bits used to read temperature analog
 const int MAX_TEMP_INT = 2^MAX_TEMP_BITS; // integer steps used to read temperature
@@ -30,11 +33,20 @@ float tempRead(){
 void setup() {
   // put your setup code here, to run once:
 
+  // set up led for output
+  pinMode(redPin,OUTPUT);
+  pinMode(bluePin,OUTPUT);
+  pinMode(greenPin,OUTPUT); 
+
   // initialize RGB LEDs to off
   setColorRgb(0,0,0);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+
+  // read thermometer
+
+  // set color
 
 }
