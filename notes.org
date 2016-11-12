@@ -46,3 +46,12 @@ where group-name is the data found before, and username is your linux user name.
 Thermosensor is SparkFun Part number DEV-08777, Microchip P/N MCP9700
 Sensor output at 0 deg is 0.5 V
 linear coefficient is 10 mV/degC
+
+* color map for display
+
+  need to create a color map for display
+  blue  -> coldest temp
+  green -> middle? 
+  red   -> hottest temp
+
+  
