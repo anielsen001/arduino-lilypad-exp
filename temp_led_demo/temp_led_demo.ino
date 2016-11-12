@@ -5,6 +5,8 @@ const int redPin   =  9;
 const int bluePin  = 10; 
 const int greenPin = 11; 
 
+int cIndex; // color map index
+
 // cmap.h contains the color map table
 #include "cmap.h"
 
@@ -40,6 +42,8 @@ void setup() {
 
   // initialize RGB LEDs to off
   setColorRgb(0,0,0);
+
+  cIndex = 0; 
 }
 
 void loop() {
@@ -48,5 +52,8 @@ void loop() {
   // read thermometer
 
   // set color
-
+  // test color map by cycling through all colors
+  setColorRgb(CMAP[cIndex][0],CMAP[cIndex][1],CMAP[cIndex][2]); 
+  cIndex++; 
+  if (cIndex > N_CMAP_LEVELS) cIndex = 0; 
 }
