@@ -56,4 +56,6 @@ void loop() {
   setColorRgb(CMAP[cIndex][0],CMAP[cIndex][1],CMAP[cIndex][2]); 
   cIndex++; 
   if (cIndex > N_CMAP_LEVELS) cIndex = 0; 
+
+  delay(30);
 }
