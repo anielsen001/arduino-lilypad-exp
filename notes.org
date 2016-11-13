@@ -54,4 +54,9 @@ linear coefficient is 10 mV/degC
   green -> middle? 
   red   -> hottest temp
 
-  
+cube-helix color scheme https://www.mrao.cam.ac.uk/~dag/CUBEHELIX/
+
+* arduino does not have %f formatter for printf
+
+  some comments on dealing with this:
+http://forum.arduino.cc/index.php?topic=175478.0
