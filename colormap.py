@@ -14,7 +14,7 @@ nLevels = 255
 # set the scale range of output
 scaleRange = 255 # max color value
 
-a = cm.get_cmap('jet',lut=nLevels)
+a = cm.get_cmap('cubehelix',lut=nLevels)
 ap = a(range(nLevels))
 
 # open output file to write

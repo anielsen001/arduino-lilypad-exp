@@ -2,7 +2,9 @@
 #include <stdio.h>
 
 // these are the pins attached to the lilypad 
-const int tempPin  = A1; // analong pin attached to temperature sensor
+// analog pin A1 was the default when the lilypad was attached
+// after breaking apart, A1 is not available, so switch to A2
+const int tempPin  = A2; // analong pin attached to temperature sensor
 const int redPin   =  9; 
 const int bluePin  = 10; 
 const int greenPin = 11; 
@@ -18,9 +20,9 @@ float tempMin = 60.0;
 
 // A/D settings for reading temperature sensor
 //const int MAX_TEMP_BITS = 10;             // number of bits used to read temperature analog
-const int MAX_TEMP_INT = 1024; // integer steps used to read temperature
-//const float MAX_TEMP_RANGE_VOLTS = 3.3;   // maximum voltage range of temperature
-const float MAX_TEMP_RANGE_VOLTS = 5.0;   // maximum voltage range of temperature
+const int MAX_TEMP_INT = 1024; // integer steps used to read temperature, 10 bit a/d
+const float MAX_TEMP_RANGE_VOLTS = 3.7;   // maximum voltage range of temperature
+//const float MAX_TEMP_RANGE_VOLTS = 5.0;   // maximum voltage range of temperature
 
 
 // this function adapted from this gist: https://gist.github.com/jamesotron/766994
@@ -36,7 +38,7 @@ int tempReadInt()
   return analogRead(tempPin); 
   
 }
-
+    
 float tempRead(){  
   // reads from the temperature sensor and returns the temperature is degree Centigrade
   //
